@@ -1,15 +1,82 @@
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#hide").click(function(){
+            $("div").hide();
+        });
+        $("#show").click(function(){
+            $("div").show();
+        });
+    });
+</script>
 <style>
+    {
+        box-sizing: border-box;
+    }
+    
     body{
+        font-family: "Times New Roman";
         background-color:skyblue
     }    
     
-<img src= "tcnj-logo.png" width="420" height="300"> 
-       
+    .header{
+        grid-area: header;
+        background-color: darkblue;
+        padding: 20px;
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    .grid-container{
+        display: grid;
+        grid-template-areas:'header header header header header header' 
+  'left middle middle middle middle right'  
+    }
+    
+    .left,
+    .middle,
+    .right{
+        padding:10px;
+        height: 50px;
+    }
+    .left{
+        grid-area: left;
+        
+    }
+    .middle{
+        grid-area: middle;
+    }
+    .right{
+        grid-area: right;
+    }
+    @media (max-width: 600px) {
+        .grid-container{
+            'header header header header header header'
+            'left left left left left left' 
+            'middle middle middle middle middle middle' 
+            'right right right right right right' 
+            
+        }
+    }
     </style>
  </head>
-
-<img src= "tcnj-logo.png" width="420" height="300"> 
+<body>
+    
+    <p>Click the Hide and Show buttons to change menu visibility</p>
+    
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+<div class="grid-container">
+    <div class="header">
+    <h1 class>TCNJ Today</h1>
+    </div>
+    <div class="left" style="background-color:lightgoldenrodyellow;"><a href="https://admissions.tcnj.edu/apply/">Apply</a></div>
+    <div class="middle" style="background-color:azure;"><a href="https://admissions.tcnj.edu/visit/">Visit</a></div>  
+    <div class="right" style="background-color:lightgoldenrodyellow;"><a href="https://give.tcnj.edu/">Give</a></div>
+    </div>    
+</body>
+<img src="tcnj-watermark.png" width="220" height="200"> 
     
 </html>
