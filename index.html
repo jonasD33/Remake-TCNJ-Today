@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
@@ -22,6 +23,7 @@
     }    
     
     .header{
+       
         grid-area: header;
         background-color: darkblue;
         padding: 20px;
@@ -60,6 +62,16 @@
             
         }
     }
+    
+    .footer{
+        position:fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: darkblue;
+        color: white;
+        text-align: center;
+    }
     </style>
  </head>
 <body>
@@ -71,12 +83,22 @@
 <div class="grid-container">
     <div class="header">
     <h1 class>TCNJ Today</h1>
+    <img src="directory/tcnj-wordmark.png" width="200" height="110"> 
     </div>
     <div class="left" style="background-color:lightgoldenrodyellow;"><a href="https://admissions.tcnj.edu/apply/">Apply</a></div>
     <div class="middle" style="background-color:azure;"><a href="https://admissions.tcnj.edu/visit/">Visit</a></div>  
     <div class="right" style="background-color:lightgoldenrodyellow;"><a href="https://give.tcnj.edu/">Give</a></div>
     </div>    
+<div class="footer">
+    <img src="directory/tcnj-wordmark.png" width="100" height="50">
+    <h2>Campus</h2>
+    <a href="https://tcnj.pages.tcnj.edu/events/">Calenders</a>
+    <a href="https://tcnj.pages.tcnj.edu/about/campus-info/campus-map/">Campus Map</a>
+    <h2>Programs</h2>
+    <a href="https://tcnj.pages.tcnj.edu/academics/majors/">List of Majors</a>
+    <a href="https://cge.tcnj.edu/">Study Abroad</a>
+    <h2>Schools</h2>
+    <a href="https://artscomm.tcnj.edu/"> Arts and Communication</a>
+</div>
 </body>
-<img src="directory/tcnj-wordmark.png" width="220" height="200"> 
-    
 </html>
